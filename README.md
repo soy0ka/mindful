@@ -1,79 +1,35 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 마인드풀
+> 섭식장애로 고생하시는 여러분들을 위한 힐링 솔루션
 
-# Getting Started
+**소요카는 코드로 세상을 더욱 아름다운 곳으로 변화시키고 싶어요!**
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## 문의
+[개발자 이메일](mailto://me@yoru.icu)
 
-## Step 1: Start the Metro Server
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## 섭식장애의 분류
+섭식장애는 음식물 섭취와 관련된 정신과적 질환으로 크게 3가지로 분류됩니다
+1. 신경성 식욕부진증 (거식증)
+2. 신경성 폭식증
+3. 폭식장애
 
-To start Metro, run the following command from the _root_ of your React Native project:
+거식증은 여러 복합적인 이유로 음식 섭취가 두려워져 음식을 잘 먹지못하는 질환이며<br/>
+신경성 폭식증은 복합적 이유로 단기간에 많은 음식을 폭식후 보상행동을(흔히 구토, 과한 운동, 절식) 반복하는 질환이며<br/>
+폭식장애는 일반적인 과식의 범주를 넘어 단시간에 많은 음식물을 섭취하는 질환을 이야기합니다<br/>
 
-```bash
-# using npm
-npm start
+## 섭식장애의 원인
+물론 환자마다 각기다른 원인을 가지고 있겠지만 <br/>
+큰 원인중 하나는 현대사회에서 과도하게 여성의 미의 기준을 마른 몸으로 잡아버리고 그거에 맞출수밖에없도록 수많은 주변의 평가속에 살기 때문이라고 할 수 있겠습니다<br/>
+현대 여성들의 체중은 대부분 정상이나 과도한 다이어트로 인해(몸무게 빼기 다이어트) 골격근이 부족한 마른비만비율이 상당히 높습니다
 
-# OR using Yarn
-yarn start
-```
+## 섭식장애의 치료
+마인드풀 어플리케이션은 섭식장애로 고통받는 사람들에게 도움을 주는 앱으로써<br/>
+- 자신 모니터링 일지 (무엇을 먹고 어떤생각 이었는지)
+- 마인드풀 이팅(마음챙김 식사)
+- 배고픔 신호찾기
+- 감정적 섭식 찾아보기
+등의 기능을 제공합니다.
 
-## Step 2: Start your Application
+또한 같이 섭식장애를 치료/극복해가는 사람들을 위한 커뮤니티도 준비되어있어 서로를 격려하며 앞으로 나가는데 도움을 줍니다
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### For Android
-
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
