@@ -6,21 +6,22 @@ import {
   BottomNavigationTab,
   Icon,
   IconElement,
+  IconProps,
 } from '@ui-kitten/components';
 
-const PersonIcon = (props): IconElement => (
+const PersonIcon = (props: IconProps): IconElement => (
   <Icon {...props} name="person-outline" />
 );
 
-const HomeIcon = (props): IconElement => (
+const HomeIcon = (props: IconProps): IconElement => (
   <Icon {...props} name="home-outline" />
 );
 
-const ChatIcon = (props): IconElement => (
+const ChatIcon = (props: IconProps): IconElement => (
   <Icon {...props} name="message-circle-outline" />
 );
 
-const CalendarIcon = (props): IconElement => (
+const CalendarIcon = (props: IconProps): IconElement => (
   <Icon {...props} name="calendar-outline" />
 );
 
@@ -31,7 +32,7 @@ const useBottomNavigationState = (initialState = 0): BottomNavigationProps => {
 
 export const BottomNavigationAccessoriesShowcase = (): React.ReactElement => {
   const topState = useBottomNavigationState();
-  const bottomState = useBottomNavigationState();
+  // const bottomState = useBottomNavigationState();
 
   return (
     <>
