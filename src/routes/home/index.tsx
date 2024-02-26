@@ -1,6 +1,5 @@
 import * as React from 'react'
 import {Layout, Text} from '@ui-kitten/components'
-import {StackNavigationProp} from '@react-navigation/stack'
 
 export const HomeScreen: React.FC = () => {
   return (
