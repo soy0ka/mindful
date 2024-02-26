@@ -4,7 +4,7 @@ import {SafeAreaProvider} from 'react-native-safe-area-context'
 import {light, mapping} from '@eva-design/eva'
 import {ApplicationProvider, IconRegistry} from '@ui-kitten/components'
 import {EvaIconsPack} from '@ui-kitten/eva-icons'
-import {AppNavigator} from './routes/index'
+import {AppNavigator, BottomNavigator} from './routes/index'
 import {AppRoute} from './routes/config'
 
 export default () => {
@@ -16,9 +16,10 @@ export default () => {
       <ApplicationProvider mapping={mapping} theme={light}>
         <SafeAreaProvider>
           <NavigationContainer>
-            <AppNavigator
+            {/* <AppNavigator
               initialRouteName={isAuthorized ? AppRoute.Home : AppRoute.Home}
-            />
+            /> */}
+            <BottomNavigator />
           </NavigationContainer>
         </SafeAreaProvider>
       </ApplicationProvider>
