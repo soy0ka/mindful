@@ -1,4 +1,6 @@
 export enum AppRoute {
-  Home = 'Home',
+  HOME = 'Home',
   MYPAGE = 'MyPage',
+  CALENDAR = 'Calendar',
+  COMMUNITY = 'Community'
 }

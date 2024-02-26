@@ -16,9 +16,10 @@ export default () => {
       <ApplicationProvider mapping={mapping} theme={light}>
         <SafeAreaProvider>
           <NavigationContainer>
-            <AppNavigator
+            {/* <AppNavigator
               initialRouteName={isAuthorized ? AppRoute.Home : AppRoute.Home}
-            />
+            /> */}
+            <BottomNavigator />
           </NavigationContainer>
         </SafeAreaProvider>
       </ApplicationProvider>
