@@ -105,7 +105,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-gesture-handler')
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:flipper-integration")
 
