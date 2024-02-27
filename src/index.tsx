@@ -8,7 +8,7 @@ import {BottomNavigator} from './routes/index'
 import { LoginScreen } from './routes/auth'
 
 export default () => {
-  const isAuthorized: boolean = false
+  const isAuthorized: boolean = true
 
   return (
     <React.Fragment>
