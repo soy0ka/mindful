@@ -1,34 +1,21 @@
 import * as React from 'react'
 import {Button, Input, Layout, Text} from '@ui-kitten/components'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import {getUserInfo, saveUserInfo} from '../../assets/localStorageManager'
 
 export const HomeScreen: React.FC = (props: any) => {
-  const [token, setToken] = React.useState<string | null>(null)
-  const [displayToken, setDisplayToken] = React.useState<string | null>(null)
+  const [userInfo, setUserInfo] = React.useState<any>(null)
+
   React.useEffect(() => {
-    const fetchToken = async () => {
-      const token = await AsyncStorage.getItem('token')
-      setDisplayToken(token)
-    }
-    fetchToken()
-  },[])
-
-  const handleSave = async(event: any) => {
-    await AsyncStorage.setItem('token', token ? token : 'blank')
-  }
-
-  const handleLoad = async(event: any) => {
-    const token = await AsyncStorage.getItem('token')
-    setDisplayToken(token)
-  }
+    getUserInfo().then((userInfo) => {
+      setUserInfo(userInfo)
+    })
+  }, [])
   
   return (
     <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text category="h1">HOME</Text>
-      <Input placeholder="Basic Usage" onChangeText={(nextValue) => setToken(nextValue)} />
-      <Button onPress={handleSave}>저장</Button>
-      <Button onPress={handleLoad}>불러오기</Button>
-      {displayToken && <Text category="h6">{displayToken}</Text>}
+      <Text category="h4">안녕하세요 {userInfo?.name}님</Text>
+      <Button onPress={() => props.navigation.navigate('Login')}>
+        먹은 음식 기록하기</Button>
     </Layout>
   )
 }

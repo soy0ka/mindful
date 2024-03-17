@@ -1,10 +1,18 @@
 import * as React from 'react'
-import {Layout, Text} from '@ui-kitten/components'
+import {Card, Layout, Text} from '@ui-kitten/components'
 
 export const MyPage: React.FC = (props: any) => {
   return (
     <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text category="h1">MY PAGE</Text>
+      <Card
+        style={{
+          width: '100%',
+
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Text category="h4">마이페이지</Text>
+      </Card>
     </Layout>
   )
 }
