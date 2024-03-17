@@ -69,3 +69,5 @@ yarn-error.log
 /ios/GoogleService-Info.plist
 /android/app/google-services.json
 
+/android/gradle.properties
+
