@@ -27,6 +27,7 @@ end
 
 target 'mindful' do
   config = use_native_modules!
+  pod 'GoogleSignIn'
 
   use_react_native!(
     :path => config[:reactNativePath],

@@ -6,6 +6,7 @@ export const HomeScreen: React.FC = (props: any) => {
   const [userInfo, setUserInfo] = React.useState<any>(null)
 
   React.useEffect(() => {
+    // saveUserInfo({name: '요루'})
     getUserInfo().then((userInfo) => {
       setUserInfo(userInfo)
     })
