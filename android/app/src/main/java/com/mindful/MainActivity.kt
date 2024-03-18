@@ -1,4 +1,4 @@
-package com.onde.mindful
+package com.mindful
 import android.os.Bundle;
 
 import com.facebook.react.ReactActivity
