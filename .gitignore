@@ -70,4 +70,5 @@ yarn-error.log
 /android/app/google-services.json
 
 /android/gradle.properties
+/android/app/debug.keystore-temp
 
