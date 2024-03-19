@@ -9,7 +9,8 @@ import {HomeScreen} from './home'
 import {CalendarScreen} from './calendar'
 import {CommunityScreen} from './community'
 import {MyPage} from './mypage'
-import { LoginScreen } from './auth'
+import {LoginScreen} from './auth'
+import {MainNavigator} from './home'
 
 const theme = useTheme()
 
@@ -19,7 +20,8 @@ const BottomTab = createBottomTabNavigator()
 export const AppNavigator = (props: any): React.ReactElement => (
   <Stack.Navigator {...props} screenOptions={{headerShown: false}}>
     <Stack.Screen name={AppRoute.LOGIN} component={LoginScreen} />
-    <Stack.Screen name="HomeStack" component={BottomNavigator} />
+    <Stack.Screen name="HomeStack" component={BottomNavigator} options={{ title: '홈'}} />
+    <Stack.Screen name="HomeNav" component={MainNavigator} />
   </Stack.Navigator>
 )
 

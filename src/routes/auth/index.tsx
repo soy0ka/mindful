@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Divider, Layout, Text, Button, Icon, IconProps} from '@ui-kitten/components'
+import {Divider, Layout, Text, Button} from '@ui-kitten/components'
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -35,6 +35,9 @@ export const LoginScreen: React.FC = (props: any) => {
       <Text category="h1">로그인</Text>
       <Divider />
       <GoogleSigninButton onPress={signIn} />
+      <Button onPress={() => props.navigation.navigate('HomeStack')}>
+        로그인패스
+      </Button>
     </Layout>
   )
 }

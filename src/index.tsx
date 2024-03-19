@@ -15,7 +15,7 @@ export default () => {
       <ApplicationProvider {...eva} mapping={eva.mapping} theme={eva.light}>
         <SafeAreaProvider>
           <NavigationContainer>
-            <AppNavigator />
+              <AppNavigator />
           </NavigationContainer>
         </SafeAreaProvider>
       </ApplicationProvider>
