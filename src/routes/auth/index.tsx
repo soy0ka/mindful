@@ -5,7 +5,6 @@ import {
   GoogleSigninButton,
   statusCodes,
 } from '@react-native-google-signin/google-signin'
-import superaget from 'superagent'
 import { saveUserInfo } from '../../assets/localStorageManager'
 
 export const LoginScreen: React.FC = (props: any) => {

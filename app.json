@@ -1,4 +1,5 @@
 {
   "name": "mindful",
-  "displayName": "플라토"
+  "displayName": "플라토",
+  "supportsTablet": true
 }
