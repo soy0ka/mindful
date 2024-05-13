@@ -1,7 +1,7 @@
 import * as React from 'react'
-import {Layout, Text} from '@ui-kitten/components'
 import {ExpandableCalendar, AgendaList, CalendarProvider, WeekCalendar} from 'react-native-calendars'
 import AgendaItem from '../../assets/AgendaItem'
+import {LocaleConfig} from '../../assets/calanderLocale'
 
 export const CalendarScreen: React.FC = (props: any) => {
   const {weekView} = props
@@ -12,7 +12,7 @@ export const CalendarScreen: React.FC = (props: any) => {
   }, [])
  
   return (
-    <CalendarProvider date={date} showTodayButton>
+    <CalendarProvider date={date} showTodayButton {...LocaleConfig}>
       {weekView ? (
         <WeekCalendar firstDay={1} />
       ) : (

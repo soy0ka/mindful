@@ -16,3 +16,23 @@ export const getUserInfo = async () => {
     console.error(e)
   }
 }
+
+export const saveFoodRecord = async (record: any) => {
+  try {
+    const encodedRecord = await AsyncStorage.getItem('foodRecord')
+    const foodRecord = encodedRecord ? JSON.parse(encodedRecord) : []
+    foodRecord.push(record)
+    await AsyncStorage.setItem('foodRecord', JSON.stringify(foodRecord))
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+export const getFoodRecord = async () => {
+  try {
+    const encodedRecord = await AsyncStorage.getItem('foodRecord')
+    return encodedRecord ? JSON.parse(encodedRecord) : []
+  } catch (e) {
+    console.error(e)
+  }
+}

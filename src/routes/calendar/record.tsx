@@ -51,7 +51,7 @@ export const Record: React.FC = (props: any) => {
           minimumValue={0}
           maximumValue={10}
         />
-        <Button style={{marginTop: 20}}>기록하기</Button>
+        <Button style={{marginTop: 20, marginBottom: 20}}>기록하기</Button>
       </Layout>
       <DatePicker
           modal
