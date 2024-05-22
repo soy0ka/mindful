@@ -1,8 +1,10 @@
 import * as React from 'react'
+import {launchImageLibrary} from 'react-native-image-picker'
 import {Layout, Text, Button, Input} from '@ui-kitten/components'
 import DatePicker from 'react-native-date-picker'
 import Slider from '@react-native-community/slider'
-import { ScrollView } from 'react-native'
+import { Image, ScrollView } from 'react-native'
+import { saveFoodRecord } from '../../assets/localStorageManager' 
 import { Keyboard } from 'react-native'
 
 export const Record: React.FC = (props: any) => {
@@ -10,7 +12,20 @@ export const Record: React.FC = (props: any) => {
   const [hungry, setHungry] = React.useState<number>(5)
   const [satiation, setSatiation] = React.useState<number>(5)
   const [datePickerVisible, setDatePickerVisible] = React.useState(false)
+  const [image, setImage] = React.useState<any>(null)
+  const [food, setFood] = React.useState<string>('')
 
+  const saveRecord = () => {
+    // [{title: '2024-03-20', data: [{hour: '12:34', title: '빵', detail: '배고픔지수 1, 배부름지수 2' }]}]
+    saveFoodRecord({
+      title: date.toISOString().split('T')[0],
+      data: [{
+        hour: `${date.getHours()}:${date.getMinutes()}`,
+        title: food,
+        detail: `배고픔지수 ${hungry}, 배부름지수 ${satiation}`
+      }]
+    })
+  }
   return (
     <ScrollView onTouchStart={Keyboard.dismiss} >
     <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -33,6 +48,8 @@ export const Record: React.FC = (props: any) => {
         />
         <Input
           multiline={true}
+          value={food}
+          onChangeText={setFood}
           style={{marginTop: 20, minHeight: 10}}
           label='먹은 음식과 양'
           placeholder='무슨 음식을 먹었나요'
@@ -51,7 +68,9 @@ export const Record: React.FC = (props: any) => {
           minimumValue={0}
           maximumValue={10}
         />
-        <Button style={{marginTop: 20, marginBottom: 20}}>기록하기</Button>
+        <Button onPress={() => launchImageLibrary({mediaType: 'photo'}, (response) => { setImage(response.assets?.[0].uri) })}>음식 사진 추가하기</Button>
+        <Image source={{uri: image}} style={{width: 'auto', height: 250, marginTop: 20}} />
+        <Button style={{marginTop: 20, marginBottom: 50}} onPress={saveFoodRecord}>기록하기</Button>
       </Layout>
       <DatePicker
           modal

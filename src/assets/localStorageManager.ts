@@ -18,6 +18,7 @@ export const getUserInfo = async () => {
 }
 
 export const saveFoodRecord = async (record: any) => {
+  await AsyncStorage.setItem('foodRecord', JSON.stringify([]))
   try {
     const encodedRecord = await AsyncStorage.getItem('foodRecord')
     const foodRecord = encodedRecord ? JSON.parse(encodedRecord) : []
